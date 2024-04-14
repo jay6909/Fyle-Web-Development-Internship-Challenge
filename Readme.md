@@ -1,3 +1,4 @@
+Note: I changed it so the submit button is disabled from the start and only becomes enabled if no errors are present, ofc I am showing the errors through the tooltip.
 
 Normal view has submit button disabled
 ![image](https://github.com/jay6909/Fyle-Web-Development-Internship-Challenge/assets/96417285/49e6266a-662b-490c-8699-43a1e2b453a9)

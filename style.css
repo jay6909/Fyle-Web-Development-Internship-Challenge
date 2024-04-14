@@ -87,6 +87,7 @@ position: relative;
     display: none;
     justify-content: center;
     align-items: center;
+    text-align: center;
     border: 1px solid #ced4da;
     left: 50%;
     top: 50%;
