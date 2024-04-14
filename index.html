@@ -13,7 +13,7 @@
 <body>
 
 
-    <div class="container d-flex flex-column mt-5">
+    <div class="container position-relative d-flex flex-column mt-5">
         <form id="form" class="content" onsubmit="handleSubmit(event, this)">
             <div class="form-group">
                 <span class="input-label-container">
@@ -40,7 +40,7 @@
             </div>
             <div class="form-group">
                 <span class="input-label-container">
-                    <label for="annualExtraIncHelp">Enter extra income</label>
+                    <label for="annualExtraIncomeHelp">Enter extra income</label>
                     <div class="tt-holder" style="display: flex;" data-toggle="tooltip" data-placement="top"
                         title="Your extra incomes apart from salary">
                         ?
@@ -48,7 +48,7 @@
                 </span>
                 <div class="input-field">
                     <input name="extraIncome" type="text" class="form-control" onblur="numberInputChange(this)"
-                        id="annualExtraIncHelp" aria-describedby="annualExtraIncHelp"
+                        id="annualExtraIncomeHelp" aria-describedby="annualExtraIncomeHelp"
                         placeholder="Enter extra income from other sources">
                     <div id="error-extra-income" class="tt-holder" style="right: 0%;
                     top: 25%; color:red;
@@ -58,7 +58,22 @@
                 </div>
             </div>
 
-
+            <div class="form-group">
+                <span class="input-label-container">
+                    <label for="ageGroupSelect">Select your age group</label>
+                    <div class="tt-holder" style="display: flex;" data-toggle="tooltip" data-placement="top"
+                        title="Select your age group from dropdown">
+                        ?
+                    </div>
+                </span>
+                <div class="input-group mb-3">
+                    <select name="ageGroup" class="custom-select" id="ageGroupSelect">
+                        <option value="1"> less than 40 years </option>
+                        <option value="2"> between 40 and 60 years</option>
+                        <option value="3"> more than 60 years</option>
+                    </select>
+                </div>
+            </div>
 
             <div class="form-group">
                 <span class="input-label-container">
@@ -80,9 +95,16 @@
                 </div>
             </div>
 
-            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+            <button id="submitBtn" disabled type="submit" class="btn btn-primary">Submit</button>
         </form>
-
+        <div class="position-absolute" id="modalTaxResult">
+            <div class="d-flex flex-column  align-items-center">
+                <div class="h2">Your overall income will be</div>
+                <div class="h2" id="afterTaxValText"></div>
+                <small>after tax deductions</small>
+                <button id="closeBtn" class="btn btn-primary" onclick="closeModal(this)">Close</button>
+            </div>
+        </div>
     </div>
     <script src="calcLogic.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

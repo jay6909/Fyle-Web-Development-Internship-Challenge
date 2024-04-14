@@ -5,7 +5,7 @@
 [data-tip]:before {
 	content:'';
 	/* hides the tooltip when not hovered */
-	display:block;
+	display:none;
 	content:'';
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
@@ -21,7 +21,7 @@
 	height:0;
 }
 [data-tip]:after {
-	display:block;
+	display:none;
 	content:attr(data-tip);
 	position:absolute;
 	top:-18px;
@@ -39,10 +39,10 @@
 	white-space:nowrap;
 	word-wrap:normal;
 }
-/* [data-tip]:hover:before,
+[data-tip]:hover:before,
 [data-tip]:hover:after {
 	display:block;
-} */
+}
 
 .input-field input{
     border: none;
@@ -80,4 +80,26 @@
 .input-label-container{
 
 position: relative;
+}
+
+#modalTaxResult{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ced4da;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 400px;
+    padding: 2em;
+    background-color: white;
+    transition: all ease-in-out;
+}
+#form{
+    transition: all ease-in-out;
+}
+.blur{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
 }
