@@ -1,5 +1,5 @@
 
-Normal View
+Normal view
 ![image](https://github.com/jay6909/Fyle-Web-Development-Internship-Challenge/assets/96417285/49e6266a-662b-490c-8699-43a1e2b453a9)
 
 Tooltip on hover
