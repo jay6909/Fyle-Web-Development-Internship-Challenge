@@ -33,13 +33,13 @@ const handleSubmit = (event, element) => {
   let deductionsVal = form.get("deductions");
 
   if (!grossIncomeVal) {
-    enableErrorShow("annualGrossIncomeHelp");
+    enableErrorToolTipShow("annualGrossIncomeHelp");
   }
   if (!extraIncomeVal) {
-    enableErrorShow("annualExtraIncomeHelp");
+    enableErrorToolTipShow("annualExtraIncomeHelp");
   }
   if (!deductionsVal) {
-    enableErrorShow("deductionsApplicableHelp");
+    enableErrorToolTipShow("deductionsApplicableHelp");
   } else {
     const formDataObj = {
       grossIncomeVal,
@@ -74,7 +74,7 @@ function renderTaxResultModal(result) {
   document.getElementById("form").classList.toggle("blur");
 }
 
-function enableErrorShow(elementId) {
+function enableErrorToolTipShow(elementId) {
   disableSubmit[elementId] = true;
   const element = document.getElementById(elementId);
   const errorToolTip = element.parentNode.children[1];
