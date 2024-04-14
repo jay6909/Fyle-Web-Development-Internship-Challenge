@@ -65,6 +65,7 @@
 }
 .tt-holder{
     position: absolute;
+    cursor: pointer;
     display: none;
     justify-content: center;
     align-items: center;
