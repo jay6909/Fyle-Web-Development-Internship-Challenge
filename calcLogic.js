@@ -69,8 +69,10 @@ const handleSubmit = (event, element) => {
 };
 function renderTaxResultModal(result) {
   document.getElementById("modalTaxResult").style.display = "flex";
-  document.getElementById("afterTaxValText").textContent =
-    result.incomeAfterTax;
+
+  const numWithCommas=result.incomeAfterTax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  document.getElementById("afterTaxValText").textContent =numWithCommas;
   document.getElementById("form").classList.toggle("blur");
 }
 
